@@ -4,6 +4,7 @@ document.getElementById("tri-cal").addEventListener('click', () => {
 
     let area = parseFloat(0.5 *fastValue * secondValue).toFixed(2);
     setValue(area, 'tri-area')
+    setValueInList("Triangle", area);
 })
 // 2
 document.getElementById("rec-cal").addEventListener('click', () => {
@@ -11,6 +12,7 @@ document.getElementById("rec-cal").addEventListener('click', () => {
     let secondValue = getValueFromInput("rec-height");
     let area = parseFloat(fastValue * secondValue).toFixed(2);
     setValue(area, "rec-area")
+    setValueInList("Rectangle", area);
 })
 // 3
 document.getElementById("par-cal").addEventListener('click', () => {
@@ -26,6 +28,7 @@ document.getElementById("rho-cal").addEventListener('click', () => {
     let secondValue = getValueFromInput("rho-height");
     let area = parseFloat(0.5 * fastValue * secondValue).toFixed(2);
     setValue(area, 'rho-area')
+    setValueInList("Rhombus", area);
 })
 // 5
 document.getElementById("pen-cal").addEventListener('click', () => {
@@ -33,12 +36,13 @@ document.getElementById("pen-cal").addEventListener('click', () => {
     let secondValue = getValueFromInput("pen-height");
     let area = parseFloat(0.5 * fastValue * secondValue).toFixed(2);
     setValue(area, 'pen-area')
+    setValueInList("Pentagon", area);
 })
 // 6
 document.getElementById("ell-cal").addEventListener('click', () => {
     let fastValue = getValueFromInput("ell-base");
     let secondValue = getValueFromInput("ell-height");
     let area = parseFloat(Math.PI * fastValue * secondValue).toFixed(2); 
-    setValue(area, 'ell-area')
-    setValueInList(area,"Ellipse")
+    setValue(area, 'ell-area');
+    setValueInList("Ellipse",area);
 })
