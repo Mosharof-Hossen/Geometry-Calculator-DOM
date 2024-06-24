@@ -30,6 +30,6 @@ function setValueInList(name, area) {
 
 function converter(id) {
     let cmArea = document.getElementById(id);
-    let meterArea = cmArea.innerText / 100;
+    let meterArea = parseFloat(cmArea.innerText / 100).toFixed(2);
     cmArea.innerText = meterArea;
 }
